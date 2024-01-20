@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './booking-calender.component.html',
-  styleUrl: './booking-calender.component.css'
+  styleUrl: './booking-calender.component.css',
 })
-export class BookingCalenderComponent {
-
-}
+export class BookingCalenderComponent {}
