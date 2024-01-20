@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, signal } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -8,4 +8,23 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css',
 })
-export class LayoutComponent {}
+export class LayoutComponent {
+  protected readonly loggedUser = signal<string>('');
+  private readonly router = inject(Router);
+
+  constructor() {
+    const storageData = localStorage.getItem('hotelUser');
+    if (storageData) {
+      this.loggedUser.set(JSON.parse(storageData)?.userName);
+    }
+  }
+
+  onLogoff(): void {
+    this.router.navigate(['/login']).then(res => {
+      if (res) {
+        localStorage.removeItem('hotelUser');
+        this.loggedUser.set('');
+      }
+    });
+  }
+}

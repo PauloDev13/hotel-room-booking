@@ -10,7 +10,6 @@ import { ResponseLogin } from '../types/response-login.interface';
 })
 export class RoomService {
   private readonly http = inject(HttpClient);
-
   private readonly apiEndPoint: string =
     'https://freeapi.miniprojectideas.com/api/HotelBooking';
 
