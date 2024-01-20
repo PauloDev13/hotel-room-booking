@@ -7,7 +7,6 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NewBookingComponent } from './pages/new-booking/new-booking.component';
 import { RoomsComponent } from './pages/rooms/rooms.component';
-import { UsersComponent } from './pages/users/users.component';
 
 export const routes: Routes = [
   {
@@ -42,10 +41,6 @@ export const routes: Routes = [
       {
         path: 'booking-calender',
         component: BookingCalenderComponent,
-      },
-      {
-        path: 'users',
-        component: UsersComponent,
       },
     ],
   },
