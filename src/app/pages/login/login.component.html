@@ -1,1 +1,25 @@
-<p>login works!</p>
+<!--ring div starts here-->
+<div class="parent">
+  <div class="ring">
+    <i style="--clr:#00ff0a;"></i>
+    <i style="--clr:#ff0057;"></i>
+    <i style="--clr:#fffd44;"></i>
+    <div class="login">
+      <h2>Login</h2>
+      <div class="inputBx">
+        <input [(ngModel)]="loginObj.phone" placeholder="Username" type="text" />
+      </div>
+      <div class="inputBx">
+        <input [(ngModel)]="loginObj.password" placeholder="Password" type="password">
+      </div>
+      <div class="inputBx">
+        <input (click)="onLogin()" type="submit" value="Sign in" />
+      </div>
+      <div class="links">
+        <a href="#">Forget Password</a>
+        <a href="#">Signup</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--ring div ends here-->

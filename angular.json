@@ -13,6 +13,9 @@
         },
         "@schematics/angular:service": {
           "skipTests": true
+        },
+        "@schematics/angular:interface": {
+          "type": "interface"
         }
       },
       "root": "",
